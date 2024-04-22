@@ -80,8 +80,8 @@ static int32 ListTests(const FString& TargetFile)
 	}
 
 	UE_LOG(LogVisualStudioTools, Display, TEXT("Found %d tests"), TestInfos.Num());
-
 	OutFile.close();
+
 	return 0;
 }
 
@@ -182,7 +182,7 @@ UVSTestAdapterCommandlet::UVSTestAdapterCommandlet()
 	HelpParamDescriptions.Add(TEXT("[Required] The output file from running test cases that we parse to retrieve test case results."));
 
 	HelpParamNames.Add(FiltersParam);
-	HelpParamDescriptions.Add(TEXT("[Optional] List of test filters to enable separated by '+'. Default is 'smoke+product+perf+stress+negative'"));
+	HelpParamDescriptions.Add(TEXT("[Optional] List of test filters to enable separated by '+'. Default is 'application+smoke+product+perf+stress+negative'"));
 
 	HelpParamNames.Add(HelpParam);
 	HelpParamDescriptions.Add(TEXT("[Optional] Print this help message and quit the commandlet immediately."));
